@@ -2,9 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
-## Development server
+## Creating an image
+Open terminal and navigate to project root where the Dockerfile is located create a tag using `docker build -t heroes-app:v0.0.0 .`. This will create the image of your application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Development server
+1. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. Open terminal and navigate to project root where the docker-compose.yaml is located and Run `docker compose up`. This will create the container using the image and start your application. Navigate to `http://localhost:4200/`
 
 ## Code scaffolding
 
@@ -13,6 +16,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
 
 ## Running unit tests
 
