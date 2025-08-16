@@ -16,7 +16,7 @@ export class HeroesComponent {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-    this._messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+    this._messageService.add(`HeroesComponent: Selected hhero id=${hero.id}`);
   }
 
   getHeroes(): void {
