@@ -4,7 +4,7 @@
     <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
       <span class="badge">{{hero.id}}</span>
     <a routerLink="/detail/{{hero.id}}">
-  {{hero.name}}
+  {{hero.title}}
 </a>
     </button>
   </li>

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tour-of-heros
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+    app: tour-of-heros
+  template:
+    metadata:
+      labels:
+        app: tour-of-heros
+    spec:
+      containers:
+      - name: heroes-app
+        image: kamaleshksingh/heroes-app
+        ports:
+          containerPort: 80
+          

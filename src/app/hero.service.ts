@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Hero } from './hero';
 import { MessageService } from './message.service';
@@ -8,11 +9,10 @@ import { HEROES } from './mock-heroes';
   providedIn: 'root'
 })
 export class HeroService {
+  private url = 'https://my-json-server.typicode.com/JSGund/XHR-Fetch-Request-JavaScript/posts';
 
-  constructor(private _messageService: MessageService) { }
+  constructor(private _messageService: MessageService, private _http: HttpClient) { }
   getHeroes(): Observable<Hero[]> {
-    const heroes = of(HEROES);
-    this._messageService.add('HeroService: fetched heroes');
-    return heroes;
+    return this._http.get<Hero[]>(this.url)
   }
 }
